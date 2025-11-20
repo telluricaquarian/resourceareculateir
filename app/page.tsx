@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="mx-auto max-w-3xl">
-      <h1 className="mb-6 text-4xl font-bold">Welcome to Our Docs</h1>
+      <h1 className="mb-6 text-4xl font-bold">Welcome to Our Resourcess</h1>
       <p className="mb-4">
         This is a gorgeous minimal documentation site built with Next.js, Tailwind CSS, and shadcn/ui components.
       </p>

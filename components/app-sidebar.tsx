@@ -53,7 +53,7 @@ export function AppSidebar() {
               <Label htmlFor="search" className="sr-only">
                 Search
               </Label>
-              <Input id="search" placeholder="Search the docs..." className="pl-8" />
+              <Input id="search" placeholder="Search aclr77 docs..." className="pl-8" />
               <Search className="pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50" />
             </SidebarGroupContent>
           </SidebarGroup>
