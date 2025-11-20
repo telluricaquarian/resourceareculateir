@@ -39,7 +39,7 @@ export function AppSidebar() {
               <Link href="/">
                 <div className="flex items-center justify-center">
                 <Image
-  src="/arecrecourselogo.png"
+  src="/arecresourcelogo.png"
   alt="Areculateir Resource Logo"
   width={40}
   height={40}
