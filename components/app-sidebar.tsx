@@ -36,9 +36,15 @@ export function AppSidebar() {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <Link href="/">
-                <div className="bg-primary text-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <GalleryVerticalEnd className="size-4" />
-                </div>
+              <div className="flex items-center justify-center">
+  <Image 
+    src="/arcrecourselogo.png" 
+    alt="Areculateir Resource Logo" 
+    width={32} 
+    height={32} 
+    className="rounded-md"
+  />
+</div>
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span className="font-semibold">Areculateir Resources</span>
                   <span className="">v1.0.0</span>
