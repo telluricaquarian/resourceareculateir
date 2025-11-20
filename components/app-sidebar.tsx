@@ -38,13 +38,13 @@ export function AppSidebar() {
             <SidebarMenuButton size="lg" asChild>
               <Link href="/">
                 <div className="flex items-center justify-center">
-                  <Image
-                    src="/arcrecourselogo.png"
-                    alt="Areculateir Resource Logo"
-                    width={32}
-                    height={32}
-                    className="rounded-md"
-                  />
+                <Image
+  src="/arcrecourselogo.png"
+  alt="Areculateir Resource Logo"
+  width={40}
+  height={40}
+  className="rounded-md"
+/>
                 </div>
 
                 <div className="flex flex-col gap-0.5 leading-none">
