@@ -2,8 +2,9 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { GalleryVerticalEnd, Search } from "lucide-react"
+import { Search } from "lucide-react"
 
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -36,15 +37,16 @@ export function AppSidebar() {
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
               <Link href="/">
-              <div className="flex items-center justify-center">
-  <Image 
-    src="/arcrecourselogo.png" 
-    alt="Areculateir Resource Logo" 
-    width={32} 
-    height={32} 
-    className="rounded-md"
-  />
-</div>
+                <div className="flex items-center justify-center">
+                  <Image
+                    src="/arcrecourselogo.png"
+                    alt="Areculateir Resource Logo"
+                    width={32}
+                    height={32}
+                    className="rounded-md"
+                  />
+                </div>
+
                 <div className="flex flex-col gap-0.5 leading-none">
                   <span className="font-semibold">Areculateir Resources</span>
                   <span className="">v1.0.0</span>
@@ -53,6 +55,7 @@ export function AppSidebar() {
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
+
         <form>
           <SidebarGroup className="py-0">
             <SidebarGroupContent className="relative">
@@ -65,6 +68,7 @@ export function AppSidebar() {
           </SidebarGroup>
         </form>
       </SidebarHeader>
+
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>Navigation</SidebarGroupLabel>
