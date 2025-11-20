@@ -10,6 +10,7 @@ const navItems = [
   { name: "Getting Started", href: "/getting-started" },
   { name: "Components", href: "/components" },
   { name: "API Reference", href: "/api-reference" },
+  { name: "Lead Generation", href: "/leadgeneration" },
 ]
 
 export default function Navigation() {
