@@ -23,10 +23,7 @@ import {
 // Main docs navigation
 const docsNavItems = [
   { title: "Introduction", url: "/" },
-  { title: "Getting Started", url: "/getting-started" },
-  { title: "Components", url: "/components" },
-  { title: "API Reference", url: "/api-reference" },
-  { title: "Lead Generation", url: "/leadgeneration" }, // existing page
+  { title: "Lead Generation", url: "/leadgeneration" },
 ]
 
 // Footer → Solutions
