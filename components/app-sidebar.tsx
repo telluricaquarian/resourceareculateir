@@ -23,8 +23,8 @@ import {
 // Main docs navigation
 const docsNavItems = [
   { title: "Introduction", url: "/" },
-  { title: "Lead Generation", url: "/leadgeneration" },
 ]
+
 
 // Footer → Solutions
 const solutionNavItems = [
