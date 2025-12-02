@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Search } from "lucide-react"
 
@@ -62,7 +63,23 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <div className="px-2 py-4 space-y-2">
+        {/* Logo row */}
+        <div className="px-3 pt-4 pb-2 flex items-center gap-3">
+          <Image
+            src="/arecresourcelogo.png"
+            alt="Areculateir Resources"
+            width={32}
+            height={32}
+            className="rounded-sm"
+            priority
+          />
+          <span className="text-sm font-semibold tracking-tight">
+            Areculateir Resources
+          </span>
+        </div>
+
+        {/* Search input */}
+        <div className="px-3 pb-4 space-y-2">
           <Label htmlFor="search" className="sr-only">
             Search
           </Label>
