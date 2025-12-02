@@ -2,7 +2,6 @@
 
 import * as React from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { Search } from "lucide-react"
 
@@ -16,16 +15,45 @@ import {
   SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
-  SidebarMenuItem,
   SidebarMenuButton,
+  SidebarMenuItem,
 } from "@/components/ui/sidebar"
 
-const navItems = [
+// Main docs navigation
+const docsNavItems = [
   { title: "Introduction", url: "/" },
   { title: "Getting Started", url: "/getting-started" },
   { title: "Components", url: "/components" },
   { title: "API Reference", url: "/api-reference" },
-  { name: "Lead Generation", href: "/leadgeneration" },
+  { title: "Lead Generation", url: "/leadgeneration" }, // existing page
+]
+
+// Footer → Solutions
+const solutionNavItems = [
+  { title: "High-End UI", url: "/high-end-ui" },
+  { title: "Media Buying", url: "/media-buying" },
+  { title: "Funnel Optimization", url: "/funnel-optimization" },
+]
+
+// Footer → Resources
+const resourceNavItems = [
+  {
+    title: "Design Sensibilities – Notable Design Figures",
+    url: "/design-sensibilities",
+  },
+  { title: "Web Design Styles", url: "/web-design-styles" },
+  { title: "UX & UI Psychology", url: "/ux-ui-psychology" },
+  {
+    title: "Media Buying Mental Models",
+    url: "/media-buying-mental-models",
+  },
+  { title: "Copywriting Formulas", url: "/copywriting-formulas" },
+  { title: "VSL Formulas", url: "/vsl-formulas" },
+  { title: "Optimizing Cursor", url: "/optimizing-cursor" },
+  { title: "Using Resend for Email", url: "/using-resend-for-email" },
+  { title: "Lead Generation", url: "/leadgeneration" },
+  { title: "Privacy Policy", url: "/privacy-policy" },
+  { title: "Terms of Service", url: "/terms-of-service" },
 ]
 
 export function AppSidebar() {
@@ -34,50 +62,71 @@ export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarHeader>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
-              <Link href="/">
-                <div className="flex items-center justify-center">
-                <Image
-  src="/arecresourcelogo.png"
-  alt="Areculateir Resource Logo"
-  width={40}
-  height={40}
-  className="rounded-md"
-/>
-                </div>
-
-                <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-semibold">Areculateir Resources</span>
-                  <span className="">v1.0.0</span>
-                </div>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-
-        <form>
-          <SidebarGroup className="py-0">
-            <SidebarGroupContent className="relative">
-              <Label htmlFor="search" className="sr-only">
-                Search
-              </Label>
-              <Input id="search" placeholder="Search aclr77 docs..." className="pl-8" />
-              <Search className="pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50" />
-            </SidebarGroupContent>
-          </SidebarGroup>
-        </form>
+        <div className="px-2 py-4 space-y-2">
+          <Label htmlFor="search" className="sr-only">
+            Search
+          </Label>
+          <div className="relative">
+            <Search className="absolute left-2 top-2 h-4 w-4 text-muted-foreground" />
+            <Input
+              id="search"
+              placeholder="Search aclr77 docs..."
+              className="pl-8"
+            />
+          </div>
+        </div>
       </SidebarHeader>
 
       <SidebarContent>
+        {/* Docs group */}
         <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel>Documentation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {navItems.map((item) => (
+              {docsNavItems.map((item) => (
                 <SidebarMenuItem key={item.url}>
-                  <SidebarMenuButton asChild isActive={pathname === item.url}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={pathname === item.url}
+                  >
+                    <Link href={item.url}>{item.title}</Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        {/* Solutions group */}
+        <SidebarGroup>
+          <SidebarGroupLabel>Solutions</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {solutionNavItems.map((item) => (
+                <SidebarMenuItem key={item.url}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={pathname === item.url}
+                  >
+                    <Link href={item.url}>{item.title}</Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        {/* Resources group */}
+        <SidebarGroup>
+          <SidebarGroupLabel>Resources</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {resourceNavItems.map((item) => (
+                <SidebarMenuItem key={item.url}>
+                  <SidebarMenuButton
+                    asChild
+                    isActive={pathname === item.url}
+                  >
                     <Link href={item.url}>{item.title}</Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
