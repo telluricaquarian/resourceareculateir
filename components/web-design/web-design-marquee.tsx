@@ -1,6 +1,7 @@
+// components/web-design/web-design-marquee.tsx
 import Image from "next/image";
 
-const IMAGES = [
+const images = [
   "/images/web-design-carousel/4.png",
   "/images/web-design-carousel/5.png",
   "/images/web-design-carousel/6.png",
@@ -14,27 +15,30 @@ const IMAGES = [
   "/images/web-design-carousel/14.png",
 ];
 
-export default function WebDesignMarquee() {
-  const track = [...IMAGES, ...IMAGES];
+export function WebDesignMarquee() {
+  // Duplicate for seamless loop
+  const track = [...images, ...images];
 
   return (
-    <section className="relative overflow-hidden py-10">
-      <div className="aclr-marquee flex w-max gap-6">
-        {track.map((src, i) => (
-          <div
-            key={`${src}-${i}`}
-            className="relative h-44 w-[320px] shrink-0 overflow-hidden rounded-xl border bg-background"
-          >
-            <Image
-              src={src}
-              alt={`Web design slide ${i + 1}`}
-              fill
-              className="object-cover"
-              sizes="320px"
-              priority={i < 2}
-            />
-          </div>
-        ))}
+    <section className="w-full">
+      <div className="aclr-marquee-track">
+        <div className="aclr-marquee-inner py-8">
+          {track.map((src, i) => (
+            <div
+              key={`${src}-${i}`}
+              className="relative h-[110px] w-[260px] shrink-0 overflow-hidden rounded-2xl border bg-card shadow-sm"
+            >
+              <Image
+                src={src}
+                alt={`Web design example ${i + 1}`}
+                fill
+                className="object-cover"
+                sizes="260px"
+                priority={i < 4}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
