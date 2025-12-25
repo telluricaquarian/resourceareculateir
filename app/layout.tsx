@@ -1,4 +1,5 @@
 import "./globals.css"
+import { StickyCta } from "@/components/sticky-cta"
 import { Inter } from "next/font/google"
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 import { AppSidebar } from "@/components/app-sidebar"
@@ -8,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Minimal Docs Site",
   description: "A gorgeous minimal documentation site using Next.js App Router",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -22,7 +23,13 @@ export default function RootLayout({
         <SidebarProvider>
           <AppSidebar />
           <SidebarTrigger className="ml-3 mt-3" />
-          <main className="flex-1 overflow-auto p-8 pt-16">{children}</main>
+
+          <main className="flex-1 overflow-auto p-8 pt-16">
+            {children}
+          </main>
+
+          {/* Global Sticky CTA */}
+          <StickyCta />
         </SidebarProvider>
       </body>
     </html>
