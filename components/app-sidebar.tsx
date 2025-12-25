@@ -39,7 +39,7 @@ const resourceNavItems = [
     title: "Design Sensibilities – Notable Design Figures",
     url: "/design-sensibilities",
   },
-  { title: "Web Design Styles", url: "/web-design-styles" },
+  { title: "Web Design", url: "/web-design-styles" },
   { title: "UX & UI Psychology", url: "/ux-ui-psychology" },
   {
     title: "Media Buying Mental Models",
