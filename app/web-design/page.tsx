@@ -1,8 +1,13 @@
 // app/web-design/page.tsx
+
+import { WebDesignMarquee } from "@/components/web-design/web-design-marquee";
+
 export default function WebDesignPage() {
   return (
     <main className="mx-auto max-w-5xl px-6 py-12">
-      <header className="text-center">
+      <WebDesignMarquee />
+
+      <header className="mt-10 text-center">
         <h1 className="text-5xl font-semibold tracking-tight">Web Design</h1>
         <p className="mt-4 text-lg text-muted-foreground">
           Web design + CRO resources by Areculateir.
