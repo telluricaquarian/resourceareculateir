@@ -16,7 +16,6 @@ const images = [
 ];
 
 export function WebDesignMarquee() {
-  // Duplicate for seamless loop
   const track = [...images, ...images];
 
   return (
@@ -26,13 +25,13 @@ export function WebDesignMarquee() {
           {track.map((src, i) => (
             <div
               key={`${src}-${i}`}
-              className="relative h-[110px] w-[260px] shrink-0"
+              className="relative h-[110px] w-[260px] shrink-0 bg-transparent"
             >
               <Image
                 src={src}
                 alt={`Web design example ${i + 1}`}
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="260px"
                 priority={i < 4}
               />
