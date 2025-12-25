@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import 'tw-animate-css';
+@import "tailwindcss";
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -75,8 +75,8 @@
 }
 
 @theme inline {
-  --font-sans: 'Geist', 'Geist Fallback';
-  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -121,5 +121,37 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* ------------------------------ */
+/* Web Design marquee (global CSS) */
+/* ------------------------------ */
+
+@keyframes aclr-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.aclr-marquee-track {
+  width: 100%;
+  overflow: hidden;
+}
+
+.aclr-marquee-inner {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  animation: aclr-marquee-scroll 26s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aclr-marquee-inner {
+    animation: none;
   }
 }
