@@ -26,7 +26,7 @@ export function WebDesignMarquee() {
           {track.map((src, i) => (
             <div
               key={`${src}-${i}`}
-              className="relative h-[110px] w-[260px] shrink-0 overflow-hidden rounded-2xl border bg-card shadow-sm"
+              className="relative h-[110px] w-[260px] shrink-0"
             >
               <Image
                 src={src}
