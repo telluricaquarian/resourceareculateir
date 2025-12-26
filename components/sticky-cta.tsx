@@ -2,6 +2,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 
 export function StickyCta() {
   return (
@@ -12,8 +13,14 @@ export function StickyCta() {
         className="group flex items-center gap-3 rounded-2xl border bg-white px-4 py-3 shadow-lg transition hover:shadow-xl"
       >
         <div className="h-12 w-12 overflow-hidden rounded-full border bg-muted">
-          {/* Replace with your actual image if you have one */}
-          <div className="h-full w-full bg-gray-200" />
+          <Image
+            src="/displaypicture.png"
+            alt="Areculateir display picture"
+            width={48}
+            height={48}
+            className="h-full w-full object-cover"
+            priority
+          />
         </div>
 
         <div className="leading-tight">
@@ -30,7 +37,6 @@ export function StickyCta() {
         aria-label="Open"
         className="grid h-14 w-14 place-items-center rounded-full border bg-white shadow-lg transition hover:shadow-xl"
         onClick={() => {
-          // You can swap this to open a modal, calculator, etc.
           window.location.href = "/leadgeneration"
         }}
       >
