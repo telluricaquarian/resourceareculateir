@@ -137,23 +137,57 @@ export default function DesignSensibilitiesPage() {
         </article>
 
         {/* Frank Abagnale */}
-        <div className="mt-16 text-center">
-          <h2 className="text-3xl font-semibold tracking-tight">
-            Designing like Frank Abagnale
-          </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
-            Engineering unconscious trust through design competence.
-          </p>
+<div className="mt-16 text-center">
+  <h2 className="text-3xl font-semibold tracking-tight">
+    Designing like Frank Abagnale
+  </h2>
 
-          <div className="mx-auto mt-8 overflow-hidden rounded-2xl border bg-card">
-            <img
-              src="/catchmeifyoucan.png"
-              alt="Designing like Frank Abagnale — Engineering unconscious trust through design competence"
-              className="h-auto w-full"
-            />
-          </div>
-        </div>
-      </section>
-    </main>
-  );
-}
+  <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+    Engineering unconscious trust through design competence.
+  </p>
+
+  {/* Image directly under header + subheader */}
+  <div className="mx-auto mt-8 overflow-hidden rounded-2xl border bg-card">
+    <img
+      src="/catchmeifyoucan.png"
+      alt="Designing like Frank Abagnale — Engineering unconscious trust through design competence"
+      className="h-auto w-full"
+    />
+  </div>
+
+  {/* Descriptive text BELOW the image */}
+  <div className="mx-auto mt-10 max-w-3xl space-y-6 text-left text-muted-foreground">
+    <p>
+      <strong>Precision, Consistency, Credibility Engineering.</strong>{" "}
+      Trust is not persuaded — it is inferred. Abagnale succeeded by
+      understanding that people don’t verify what feels structurally
+      correct. Titles, typography, documents, language, and sequencing
+      aligned so cleanly that doubt never activated. In design, the same
+      principle applies: when systems are coherent, hierarchy is
+      disciplined, and execution is exact, users stop evaluating and start
+      complying. Competence becomes the interface.
+    </p>
+
+    <p>
+      <strong>Designing for Cognitive Shortcuts.</strong> Human trust
+      operates on heuristics. Abagnale exploited the fact that people rely
+      on visual order, familiar structures, and confident signaling to
+      decide what is legitimate. Interfaces work the same way. When design
+      elements align with expectation — correct spacing, formal hierarchy,
+      restrained language, and procedural flow — users assume authority
+      without conscious scrutiny. The goal isn’t deception; it’s
+      eliminating friction by making correctness obvious.
+    </p>
+
+    <p>
+      <strong>Authority Without Deception.</strong> Abagnale’s insight
+      wasn’t fraud — it was pattern recognition. People trust what appears
+      internally consistent, procedurally sound, and confidently executed.
+      Good design applies this insight ethically: not to mislead, but to
+      remove uncertainty. When every element reinforces legitimacy —
+      visual systems, copy tone, interaction timing — trust becomes
+      automatic. The best interfaces don’t convince users; they make doubt
+      unnecessary.
+    </p>
+  </div>
+</div>
