@@ -41,10 +41,6 @@ const resourceNavItems = [
   },
   { title: "Web Design", url: "/web-design" },
   { title: "UX & UI Psychology", url: "/ux-ui-psychology" },
-  {
-    title: "Media Buying Mental Models",
-    url: "/media-buying-mental-models",
-  },
   { title: "Copywriting Formulas", url: "/copywriting-formulas" },
   { title: "VSL Formulas", url: "/vsl-formulas" },
   { title: "Optimizing Cursor", url: "/optimizing-cursor" },
