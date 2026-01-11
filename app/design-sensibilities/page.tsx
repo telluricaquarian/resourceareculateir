@@ -135,6 +135,24 @@ export default function DesignSensibilitiesPage() {
             <li>Turn nostalgia into modern collectibility</li>
           </ul>
         </article>
+
+        {/* Frank Abagnale */}
+        <div className="mt-16 text-center">
+          <h2 className="text-3xl font-semibold tracking-tight">
+            Designing like Frank Abagnale
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+            Engineering unconscious trust through design competence.
+          </p>
+
+          <div className="mx-auto mt-8 overflow-hidden rounded-2xl border bg-card">
+            <img
+              src="/catchmeifyoucan.png"
+              alt="Designing like Frank Abagnale — Engineering unconscious trust through design competence"
+              className="h-auto w-full"
+            />
+          </div>
+        </div>
       </section>
     </main>
   );
