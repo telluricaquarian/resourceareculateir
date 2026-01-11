@@ -18,15 +18,6 @@ export default function WebDesignPage() {
           High-converting websites don’t “explain.” They diagnose and guide as one
           touch-point in a larger ecosystem.
         </p>
-
-        {/* Image (below header + subheader) */}
-        <div className="mx-auto mt-10 overflow-hidden rounded-2xl border bg-card">
-          <img
-            src="/catchmeifyoucan.png"
-            alt="Designing like Frank Abagnale — Engineering unconscious trust through design competence"
-            className="h-auto w-full"
-          />
-        </div>
       </header>
 
       <section className="mt-14 space-y-10">
