@@ -7,10 +7,32 @@ import { AppSidebar } from "@/components/app-sidebar"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "Minimal Docs Site",
-  description: "A gorgeous minimal documentation site using Next.js App Router",
+  title: {
+    default: "Areculateir Resources",
+    template: "%s | Areculateir Resources",
+  },
+  description:
+    "Resource library for Areculateir — high-end UI, media buying, funnel optimization, and systems.",
+  applicationName: "Areculateir Resources",
   generator: "v0.app",
+  openGraph: {
+    title: "Areculateir Resources",
+    description:
+      "Resource library for Areculateir — high-end UI, media buying, funnel optimization, and systems.",
+    siteName: "Areculateir Resources",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Areculateir Resources",
+    description:
+      "Resource library for Areculateir — high-end UI, media buying, funnel optimization, and systems.",
+  },
+  icons: {
+    icon: "/icon.svg",
+  },
 }
+
 
 export default function RootLayout({
   children,

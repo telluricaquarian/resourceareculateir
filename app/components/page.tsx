@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Components | Minimal Docs Site",
+  title: "Getting Started | Areculateir Resources",
   description: "Explore the components available in our library",
 }
 

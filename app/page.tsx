@@ -2,8 +2,10 @@ import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Introduction | Areculateir Resources",
-  description: "Foundational principles, frameworks, and strategic knowledge behind Areculateir.",
+  description:
+    "Resource library for Areculateir — high-end UI, media buying, funnel optimization, and systems.",
 }
+
 
 export default function Home() {
   return (
