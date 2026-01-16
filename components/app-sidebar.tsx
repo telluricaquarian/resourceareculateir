@@ -21,16 +21,18 @@ import {
 } from "@/components/ui/sidebar"
 
 // Main docs navigation
-const docsNavItems = [
-  { title: "Introduction", url: "/" },
-]
-
+const docsNavItems = [{ title: "Introduction", url: "/" }]
 
 // Footer → Solutions
 const solutionNavItems = [
   { title: "High-End UI", url: "/high-end-ui" },
   { title: "Media Buying", url: "/media-buying" },
   { title: "Funnel Optimization", url: "/funnel-optimization" },
+]
+
+// Visit Site (external)
+const visitSiteNavItems = [
+  { title: "Areculateir", url: "https://www.areculateir.com", external: true },
 ]
 
 // Footer → Resources
@@ -79,11 +81,7 @@ export function AppSidebar() {
           </Label>
           <div className="relative">
             <Search className="absolute left-2 top-2 h-4 w-4 text-muted-foreground" />
-            <Input
-              id="search"
-              placeholder="Search aclr77 docs..."
-              className="pl-8"
-            />
+            <Input id="search" placeholder="Search aclr77 docs..." className="pl-8" />
           </div>
         </div>
       </SidebarHeader>
@@ -96,10 +94,7 @@ export function AppSidebar() {
             <SidebarMenu>
               {docsNavItems.map((item) => (
                 <SidebarMenuItem key={item.url}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={pathname === item.url}
-                  >
+                  <SidebarMenuButton asChild isActive={pathname === item.url}>
                     <Link href={item.url}>{item.title}</Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
@@ -115,11 +110,26 @@ export function AppSidebar() {
             <SidebarMenu>
               {solutionNavItems.map((item) => (
                 <SidebarMenuItem key={item.url}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={pathname === item.url}
-                  >
+                  <SidebarMenuButton asChild isActive={pathname === item.url}>
                     <Link href={item.url}>{item.title}</Link>
+                  </SidebarMenuButton>
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+
+        {/* Visit Site group */}
+        <SidebarGroup>
+          <SidebarGroupLabel>Visit Site</SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {visitSiteNavItems.map((item) => (
+                <SidebarMenuItem key={item.url}>
+                  <SidebarMenuButton asChild>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                      {item.title}
+                    </a>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -134,10 +144,7 @@ export function AppSidebar() {
             <SidebarMenu>
               {resourceNavItems.map((item) => (
                 <SidebarMenuItem key={item.url}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={pathname === item.url}
-                  >
+                  <SidebarMenuButton asChild isActive={pathname === item.url}>
                     <Link href={item.url}>{item.title}</Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
